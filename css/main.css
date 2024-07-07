@@ -889,6 +889,12 @@ font-size: 2.5vh;
 }
 }
 
+@media (max-width: 500px) {
+.row-quote-block{
+	padding: 25px;
+}
+}
+
 @media (max-width: 460px) {
 .row-quote-container{
 	width: 99%;
@@ -1316,13 +1322,15 @@ text-align: center;
 
 }
 
-@media (max-width: 460px) {
+@media (max-width: 600px) {
 .hero-text-content{
 	width: 95%;
 }
 .hero-text-header h1{
 line-height: 1.5;
+  font-size: 3vh;
 }
 
 
 }
+
