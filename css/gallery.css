@@ -46,7 +46,11 @@
   transition: .1s ease-in;
 }
 
-
+@media (max-width: 800px) {
+#gallery{
+  max-width: 95%;
+}
+}
 
 
 /*

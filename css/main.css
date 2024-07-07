@@ -7,6 +7,8 @@ body {
     color:#f1efe8;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 fieldset,
@@ -887,7 +889,13 @@ font-size: 2.5vh;
 }
 }
 
-
+@media (max-width: 460px) {
+.row-quote-container{
+	width: 99%;
+/*	display: inline-block;
+	text-align: center;*/
+}
+}
 
 
 
@@ -1174,6 +1182,14 @@ max-height: 1000px;  /*Stops longer text jumping the box up and down, may need t
 }
 }
 
+@media (max-width: 460px) {
+.testimonial {
+/*    min-height: 375px;*/
+	background-size: 300%;
+}
+
+
+}
 
 /* ------testimonial  close-------*/
 
@@ -1295,6 +1311,17 @@ max-height: 1000px;  /*Stops longer text jumping the box up and down, may need t
 }
 .hero-text-header h1{
 text-align: center;
+}
+
+
+}
+
+@media (max-width: 460px) {
+.hero-text-content{
+	width: 95%;
+}
+.hero-text-header h1{
+line-height: 1.5;
 }
 
 
