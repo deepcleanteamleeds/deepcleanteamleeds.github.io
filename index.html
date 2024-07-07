@@ -1,0 +1,246 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<!-- START of define include HTML script -->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<!-- END of define include HTML script -->
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>The Deep Clean Team | Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <meta name="description" content="Professional Cleaning Services in Leeds">
+        <meta name="keywords" content="Cleaning, Leeds, Power Washing, Professional, Deep Clean Team">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+        <!-- navbar mobile resp logic: -->
+
+            <script type="text/javascript">function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }</script>
+
+    </head>
+
+    <body>
+
+    <!-- Main site content starts here -->
+
+    <!-- INCLUDE header.html -->
+    <div w3-include-html="header.html"></div> 
+   
+
+
+
+<div class="gallery-container">
+  <div class="gallery-wrap">
+    <div class="item item-1"></div>
+    <div class="item item-2"></div>
+    <div class="item item-3"></div>
+    <div class="item item-4"></div>
+    <div class="item item-5"></div>
+  </div>
+ </div>
+
+<div class="row-text-banner">
+    <p>Transforming Spaces with Expert Cleaning in Leeds</p>
+</div>
+
+
+
+<div class="hero-text-container">
+    <div class="hero-text-header">
+    <h1><!-- <span class="underlined underline-overflow"> -->All Aspects<!-- </span> --> of <span class="underlined underline-clip">Commercial</span> & <span class="underlined underline-mask">Domestic</span> Cleaning Undertaken</h1>
+    </div>
+    <div class="hero-text-content">
+    <p>Welcome to The Deep Clean Team, your trusted partner for all your cleaning needs in Leeds and beyond. Whether you're a homeowner looking to refresh your patio, or a business owner needing a spotless shop front, we've got you covered.</p>
+    <br />
+    <p>We pride ourselves on our attention to detail and our commitment to using eco-friendly products, ensuring a safe and thorough clean every time. Let us take the hassle out of cleaning so you can enjoy a pristine, welcoming environment</p>
+    <br />
+    <p>Discover the difference with The Deep Clean Team today – because a cleaner space is just a call away!</p>
+    </div>
+</div>
+
+
+
+
+<div class="row-icon-block">
+
+    <div class="row-header"><h1>Why Use Us?</h1></div>
+    <hr>
+
+    <div class="row-icon-container">
+        <div class="row-icon-col">
+            <h1>5 Star Service</h1>
+            <img src="img/asset/favourite.gif">
+            <p>Experience unmatched quality with The Deep Clean Team. Our commitment to excellence ensures a sparkling clean every time, backed by countless satisfied customers.</p>
+        </div> 
+        <div class="row-icon-col">
+            <h1>Competitive Pricing</h1>
+            <img src="img/asset/pound.gif">
+            <p>Top-tier cleaning services don't have to break the bank. We offer competitive pricing to provide exceptional value without compromising on quality.</p>
+        </div> 
+        <div class="row-icon-col">
+            <h1>No Fuss Quotes</h1>
+            <img src="img/asset/folder.gif">
+            <p>Get a transparent, no-obligation quote quickly and easily. We believe in clear communication and straightforward pricing, so there are no surprises.</p>
+        </div> 
+        <div class="row-icon-col">
+            <h1>Professional & Prompt</h1>
+            <img src="img/asset/hiring.gif">
+            <p>Our professional team is always on time and ready to deliver outstanding service. We respect your schedule and your property, ensuring a hassle-free experience from start to finish.</p>
+        </div> 
+    </div>
+
+</div>
+
+
+
+
+    <section class="testimonial text-center">
+        <div class="testimonial-container">
+
+            <div class="heading white-heading">
+                Don't Just Take Our Word For It
+                <hr>
+            </div>
+            <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+             
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="testimonial4_slide">
+                            <img src="img/asset/5-stars.png" />
+                            <p>Damon has completely transformed my patio area. It was full of soil stains from my plant pots that I could not shift myself. Now it looks better than it has ever done and I am thrilled with the results. I would highly recommend The Deep Clean Team.</p>
+                            <h4><i>Sarah Rawcliffe</i></h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="img/asset/5-stars.png" />
+                            <p>I got my front drive and the side of the house deep cleaned. I had the jet wash service. I can honestly say the work carried out was spot on. It was chucking it down with rain so I was bit unsure how it would turn out but when the sun came out and everything dried up you can tell how much of an amazing job was done. Smashing, pleased with the overall service. Damon also did a bit extra round the back of my garden for no extra cost. Thank you again. You wont be disappointed.</p>
+                            <h4><i>Mutahir Ali</i></h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="img/asset/5-stars.png" />
+                            <p>Really great job done by the deep clean team yesterday! professional and efficient! Garden looks lush now ready for the warmer months! Highly recommended 🌟</p>
+                            <h4><i>Chelsea Madison</i></h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="img/asset/5-stars.png" />
+                            <p>had the Deep clean team here today to refresh all our garden furniture and the resin floors ready for summer. Did an amazing job very friendly, clean and tidy would certainly recommend and will be using again. Thank you</p>
+                            <h4><i>Joanne Halmshaw</i></h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="img/asset/5-stars.png" />
+                            <p>The deep clean team cleaned our Indian stone and block paving it's come up so clean really impressed with what they've done and how friendly n polite they are! They also re sanded the block paving once finished. Left everything clean and tidy thankyou!</p>
+                            <h4><i>Claire Williford</i></h4>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+
+
+
+
+<div class="row-quote-block">
+
+    <div class="row-header"><h1><span style="color: #fff;">Let's Get Started</span></h1></div>
+    <hr>
+
+    <div class="row-quote-container">
+        <div class="row-quote-col-text">
+            <h1>Now, Let's Get Your <br /><span style="color: #A91079;">Free Quote</span> <br />Sorted</h1>
+            <p>Ready for a sparkling clean? Just fill out our quick form, and we'll get back to you with a free, no-obligation quote in no time!</p>
+            <br /><br />
+            <p><i class="fa-solid fa-phone"></i></i> 07711276180</p>
+            <p><i class="fa-solid fa-envelope"></i> deepcleanteamleeds@gmail.com</p>
+            <p><i class="fa-solid fa-map-location"></i> 37 Hough End Ave, Bramley, Leeds</p>
+            <br /><br />
+            <a href="contact.html"><div class="row-quote-col-button"><p>Submit Form</p></div></a>
+        </div> 
+        <div class="row-quote-col-img">
+            <a href="contact.html"><img src="img/asset/quote-form.png"></a>
+        </div> 
+    </div>
+
+</div>
+
+
+
+
+
+<!-- INCLUDE footer.html -->
+<div w3-include-html="footer.html"></div> 
+
+
+
+
+<!-- START of call include HTML script -->
+<script>
+includeHTML();
+</script>
+<!-- END of call include HTML script -->
+
+    </body>
+</html>

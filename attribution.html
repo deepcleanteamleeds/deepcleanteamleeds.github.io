@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<!-- START of define include HTML script -->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<!-- END of define include HTML script -->
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>The Deep Clean Team | Attribution</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <meta name="description" content="Professional Cleaning Services in Leeds">
+        <meta name="keywords" content="Cleaning, Leeds, Power Washing, Professional, Deep Clean Team">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/gallery.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+        <!-- navbar mobile resp logic: -->
+
+            <script type="text/javascript">function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }</script>
+
+    </head>
+
+    <body>
+
+
+    <!-- Main site content starts here -->
+
+    <!-- INCLUDE header.html -->
+    <div w3-include-html="header.html"></div> 
+   
+
+
+
+
+<div class="hero-text-container">
+    <div class="hero-text-header">
+    <h1><span class="underlined underline-mask">Credits</span> and <span class="underlined underline-clip">Attribution</span></h1>
+    </div>
+    <div class="hero-text-content">
+    <p>At The Deep Clean Team, we believe in the importance of recognizing and giving credit to the talented individuals and resources that have contributed to the creation and enhancement of our website. Our site is a testament to the collaborative spirit and creativity of many contributors, and we are committed to acknowledging their invaluable input.</p>
+    <hr>
+    <br /><br />
+    <span class="allign-text-left">
+    <h2>Acknowledgement of CodePen Contributions</h2>
+    <p>Our website features innovative design elements and functional components that are the result of the creative genius of several developers from CodePen.io, a platform that fosters creativity and innovation in web development.</p>
+    <br /><br />
+    <ul>
+    <li><p><b>Jhey on CodePen.io</b> - We extend our heartfelt gratitude to Jhey for their innovative "Word Underline w/ CSS && clip-path" demo. This creative solution has significantly enhanced the visual appeal of our website, adding a dynamic and engaging underline effect to our text elements. Jhey’s work showcases the power of CSS and clip-path in creating visually compelling user interfaces. You can explore more of Jhey's work on CodePen.io.</p></li>
+    <li><p><b>Baahubali on CodePen.io</b> - Our testimonials section is brought to life thanks to Baahubali's excellent "Testimonial" demo. This contribution has allowed us to showcase our customer feedback in an attractive and user-friendly manner. The design’s clean lines and intuitive layout have been integral in presenting our testimonials effectively. Check out Baahubali’s other impressive works on CodePen.io.</p></li>
+    <li><p><b>Stefan C. on CodePen.io</b> - We also acknowledge Stefan C. for the "Accordion Image Gallery" demo, which has been instrumental in creating an interactive and visually appealing gallery on our site. The accordion feature allows us to present our portfolio in a user-friendly and organized manner, enhancing the user experience significantly. Stefan C.'s creative approach to design has greatly enriched our site's functionality and aesthetics. Discover more of Stefan C.’s projects on CodePen.io.</p></li>
+    </ul>
+    <br /><br />
+    <h2>Utilisation of FontAwesome</h2>
+    <p><b>FontAwesome.com</b> - Icons play a crucial role in enhancing the usability and visual appeal of our website. We utilize icons from FontAwesome throughout our site to ensure a clean, modern, and professional look. The comprehensive icon stylesheets provided by FontAwesome.com have been indispensable in creating a cohesive and user-friendly interface. These icons enhance navigation and improve the overall user experience by providing clear and intuitive visual cues. For more information, visit FontAwesome.com.</p>
+    <br /><br />
+    <h2>Utilisation of Flaticon Icons</h2>
+    <p><b>Freepik</b> - The use of Freepik's animated icons brings our homepage to life even further, we thank them for their work and encourage you to check out more of their work on flaticon.com</p>
+    <br /><br />
+    <h2>General Attribution</h2>
+    <p>Our website’s design and functionality are the results of numerous resources and inspirations from a variety of platforms and contributors. While we strive to give full credit to all sources, we recognize that there may be instances where we have unintentionally omitted someone. We are committed to correcting any oversights and providing proper attribution where it is due.</p>
+    <p>If you identify any such oversights or have any concerns regarding the attribution of your work, please <a href="contact.html">contact us</a>, and we will promptly address the matter. Your contributions are greatly valued and we want to ensure that all work is appropriately acknowledged.</p>
+    <br /><br />
+    <p>We appreciate the creativity and effort of all the authors and platforms that have contributed to making our website a valuable resource for our visitors. Your work is greatly valued, and we are thankful for your contributions. Our website is a collaborative effort, reflecting the creativity and hard work of many talented individuals. By acknowledging these contributions, we demonstrate our commitment to fostering a respectful and supportive community.</p>
+    <br /><br />
+    <p>Thank you for visiting The Deep Clean Team. We look forward to continuing to provide exceptional service and maintaining a collaborative and respectful relationship with the creative community. Your support and contributions help us deliver a superior user experience and drive our commitment to excellence.</p>
+</span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- INCLUDE footer.html -->
+<div w3-include-html="footer.html"></div> 
+
+
+
+
+<!-- START of call include HTML script -->
+<script>
+includeHTML();
+</script>
+<!-- END of call include HTML script -->
+
+      <script src='js/gallery.js'></script>
+
+    </body>
+</html>
