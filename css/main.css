@@ -207,7 +207,13 @@ textarea {
 
 @media screen and (max-width:1920px) {
 	.logo img {
-		width: 20%;
+		width: 12.5%;
+	}
+}
+
+@media screen and (max-width:1500px) {
+	.logo img {
+		width: 15%;
 	}
 }
 
