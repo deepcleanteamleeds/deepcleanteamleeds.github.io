@@ -618,6 +618,16 @@ height: 45vh; /*  was 70*/
   text-align: center;
 }
 
+.row-header p{
+  position: relative;
+/*  margin-bottom: 5px;*/
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  color: #2a2a2a;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 
 .row-text-block{
 	width: 80%;
