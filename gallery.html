@@ -104,7 +104,7 @@ function includeHTML() {
 
 <div class="page-spacer"></div>
 
-
+<div class="row-header"><h1>Domestic Work</h1><p>Please click any image to view full size</p></div>
 <div id="gallery"></div>
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -114,9 +114,17 @@ function includeHTML() {
   </div>
 </div>
 
+<div class="page-spacer"></div>
 
-
-    
+<div class="row-header"><h1>Commercial Work</h1><p>Please click any image to view full size</p></div>
+<div id="gallery-commercial"></div>
+<!-- Modal for full size images on click-->
+<div id="modal02" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-text-white w3-xxxlarge w3-container w3-display-topright">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img02" style="max-width:100%">
+  </div>
+</div>  
 
 
 
@@ -143,6 +151,7 @@ includeHTML();
 <!-- END of call include HTML script -->
 
       <script src='js/gallery.js'></script>
+      <script src='js/gallery-commercial.js'></script>
 
     </body>
 </html>
