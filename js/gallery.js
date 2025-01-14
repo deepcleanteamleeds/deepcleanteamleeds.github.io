@@ -10,6 +10,7 @@ var images = [
   "img/jobs/IMG-20240702-WA0027.jpg",
   "img/jobs/IMG-20240702-WA0028.jpg",
   "img/jobs/IMG-20240702-WA0021.jpg",
+  "img/jobs/IMG-20250112-WA0024.jpg",
 ];
 
 var gallery = document.getElementById("gallery");
@@ -28,3 +29,4 @@ for (var i = 0; i < images.length; i++) {
 }
 
 console.log(gallery)
+
