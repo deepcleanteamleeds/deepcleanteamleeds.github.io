@@ -1,164 +1,115 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-<!-- START of define include HTML script -->
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Cleaning Services in Leeds | Jet Washing, Soft Washing & More</title>
+  <meta name="description" content="Explore our full range of expert cleaning services in Leeds. From jet washing and soft washing to roof cleaning, patio restoration, gutter cleaning, and more – The Deep Clean Team has you covered.">
+  <meta name="keywords" content="Jet Washing Leeds, Soft Washing Leeds, Roof Cleaning Leeds, Gutter Cleaning Leeds, Tarmac Restoration Leeds, Domestic Cleaning Leeds, Commercial Cleaning Leeds">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
     }
-  }
-};
-</script>
-<!-- END of define include HTML script -->
+  </script>
+</head>
 
-    <head>
+<body>
+  <div w3-include-html="header.html"></div>
 
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>The Deep Clean Team | Services</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <meta name="description" content="Professional Cleaning Services in Leeds">
-        <meta name="keywords" content="Cleaning, Leeds, Power Washing, Professional, Deep Clean Team">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/gallery.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-
-        <!-- navbar mobile resp logic: -->
-
-            <script type="text/javascript">function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }</script>
-
-    </head>
-
-    <body>
-
-
-    <!-- Main site content starts here -->
-
-    <!-- INCLUDE header.html -->
-    <div w3-include-html="header.html"></div> 
-   
-
-
-
-<div class="hero-text-container">
+  <div class="hero-text-container">
     <div class="hero-text-header">
-    <h1>What Can <span class="underlined underline-clip">We</span> Do For <span class="underlined underline-mask">You</span>?</h1>
+      <h1>Our <span class="underlined underline-clip">Cleaning Services</span> in <span class="underlined underline-mask">Leeds</span></h1>
     </div>
     <div class="hero-text-content">
-    <p>At The Deep Clean Team, we offer a wide range of professional cleaning services tailored to meet the diverse needs of our clients in Leeds and the surrounding areas. Our expertise, combined with state-of-the-art equipment and eco-friendly products, ensures that we deliver exceptional results every time. Explore our comprehensive cleaning solutions below:</p>
-    <hr>
-    <br /><br />
-    <span class="allign-text-left">
-    <h2>Jet Washing</h2>
-    <p>Our high-pressure jet washing services are designed to remove tough dirt, grime, algae, and moss from various surfaces. This powerful cleaning method is ideal for:</p>
-    <br /><br />
-    <ul>
-    <li><p><b>Driveways:</b> Restore the appearance of your driveway, removing oil stains, tire marks, and built-up grime to enhance your home's curb appeal.</p></li>
-    <li><p><b>Patios:</b> Eliminate moss, algae, and dirt from your patio, making it a clean and inviting space for outdoor gatherings.</p></li>
-    <li><p><b>Shop Fronts:</b> Keep your business entrance spotless, attracting more customers and creating a positive first impression.</p></li>
-    <li><p><b>Beer Gardens:</b> Maintain a clean and hygienic outdoor seating area for your patrons, ensuring a pleasant experience.</p></li>
-    </ul>
-    <br /><br />
-    <h2>Chemical Washing</h2>
-    <p>For surfaces that require a gentler touch, our chemical washing services utilize eco-friendly cleaning agents to effectively remove stubborn stains without causing damage. This method is perfect for:</p>
-    <br /><br />
-    <ul>
-    <li><p><b>House Washing:</b> Clean your home's exterior, including brick, siding, and stucco, to remove dirt, mold, and mildew, preserving its beauty and integrity.</p></li>
-    <li><p><b>Event Cleaning / Washing:</b> Ensure your event space is spotless before and after your function, leaving no trace of dirt or spills.</p></li>
-    <li><p><b>Tarmac Restoration:</b> With the best chemicals on the market, we can fully restore your tarmac drive.</p></li>
-    </ul>
-    <br /><br />
-    <h2>Soft Washing</h2>
-    <p>Our soft washing technique is ideal for delicate surfaces that cannot withstand the high pressure of jet washing. This method combines low-pressure water with specialized cleaning solutions to gently remove contaminants. Soft washing is suitable for:</p>
-    <br /><br />
-    <ul>
-    <li><p><b>Roofs:</b> Remove moss, algae, and lichen without damaging your roof tiles, prolonging their lifespan and maintaining their appearance.</p></li>
-    <li><p><b>House Siding:</b> Clean vinyl, wood, and other siding materials without risk of damage, ensuring your home looks its best.</p></li>
-    <li><p><b>Play Areas:</b> Ensure children's play areas are free from mold, algae, and grime, providing a safe and clean environment for kids.</p></li>
-    <li><p><b>Window Cleaning:</b> We offer cleaning for windows both with and without poles, whatever suits your situation best. We guarantee a streak-free finish withour filtered water windows cleaning.</p></li>
-    <li><p><b>Conservatory Cleaning:</b> We can bring your conservatory back to life with out professional conservatory and PVC cleaning services.</p></li>
-    </ul>
-    <br /><br />
-    <h2>Specialised Cleaning Tasks</h2>
-    <p>In addition to our core services, The Deep Clean Team offers specialized cleaning solutions to meet specific needs:</p>
-    <br /><br />
-    <ul>
-    <li><p><b>Warehouses:</b> Maintain a clean and organized warehouse space, improving safety and efficiency for your operations.</p></li>
-    <li><p><b>Insurance Work:</b> We handle insurance-related cleaning tasks, restoring properties affected by fire, flood, or other damages to their original condition.</p></li>
-    <li><p><b>Gutter Cleaning:</b> We can handily clean your gutters with the aid of our vacuuming tools.</p></li>
-    <li><p><b>Drain Cleaning:</b> Our specialised drain jetting service will ensure your drains are clean and debris free.</p></li>
-    </ul>
-    <br /><br />
-    <p>Ready to experience the difference The Deep Clean Team can make? <a href="contact.html">Contact us</a> today for a free, no-obligation quote. Let us help you maintain clean and inviting spaces with our expert cleaning services.</p>
+      <p>Based in Leeds, The Deep Clean Team provides a wide range of residential and commercial cleaning solutions. Our professional-grade tools and eco-conscious products deliver exceptional results for driveways, patios, roofs, gutters, and more.</p>
+      <hr><br><br>
+
+      <h2>Jet Washing in Leeds</h2>
+      <p>We offer powerful pressure washing for homes and businesses across Leeds. Jet washing is ideal for:</p>
+      <ul>
+        <li><b>Driveways</b> – Remove grime, stains, and algae to restore your property's kerb appeal.</li>
+        <li><b>Patios</b> – Clean moss and dirt from slabs, stone, or tiles, leaving a fresh finish.</li>
+        <li><b>Shop Fronts</b> – Maintain a clean business entrance to impress customers.</li>
+        <li><b>Beer Gardens</b> – Provide guests a tidy, slip-free outdoor seating area.</li>
+      </ul>
+
+      <h2>Chemical Washing Services</h2>
+      <p>Some surfaces benefit from a low-pressure chemical treatment using biodegradable products. These are perfect for:</p>
+      <ul>
+        <li><b>House Washing</b> – Restore the exterior of homes including brick, render, and UPVC.</li>
+        <li><b>Event Venue Cleaning</b> – Spotless preparation and post-event clean-ups.</li>
+        <li><b>Tarmac Restoration</b> – Remove stubborn stains and brighten faded tarmac drives.</li>
+      </ul>
+
+      <h2>Soft Washing in Leeds</h2>
+      <p>Our gentle but effective soft washing service suits delicate surfaces that require care without pressure damage:</p>
+      <ul>
+        <li><b>Roof Cleaning</b> – Remove moss and lichen while preserving tiles and felt.</li>
+        <li><b>House Siding</b> – Ideal for wood, vinyl, or render facades.</li>
+        <li><b>Play Areas</b> – Ensure a clean and safe play surface for children.</li>
+        <li><b>Window Cleaning</b> – Spotless windows using filtered water with pole or traditional methods.</li>
+        <li><b>Conservatory Cleaning</b> – Remove built-up grime from PVC and glass surfaces.</li>
+      </ul>
+
+      <h2>Specialist Cleaning Services</h2>
+      <p>We also offer tailored cleaning for complex or commercial jobs:</p>
+      <ul>
+        <li><b>Warehouse Cleaning</b> – Large-scale indoor and exterior maintenance.</li>
+        <li><b>Insurance Work</b> – Post-damage cleaning for floods, fire or vandalism.</li>
+        <li><b>Gutter Cleaning</b> – Vacuum-assisted clearing for safe and efficient results.</li>
+        <li><b>Drain Jetting</b> – Clear blocked drains and restore water flow fast.</li>
+      </ul>
+
+      <p>For expert cleaning services across Leeds and West Yorkshire, <a href="contact.html">get in touch today</a> for your free, no-obligation quote. We're proud to serve local homes and businesses with reliable, professional cleaning support.</p>
     </div>
-</div>
+  </div>
 
+  <div w3-include-html="footer.html"></div>
 
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+              if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          return;
+        }
+      }
+    };
+    includeHTML();
+  </script>
 
-    
+  <script src='js/gallery.js'></script>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- INCLUDE footer.html -->
-<div w3-include-html="footer.html"></div> 
-
-
-
-
-<!-- START of call include HTML script -->
-<script>
-includeHTML();
-</script>
-<!-- END of call include HTML script -->
-
-      <script src='js/gallery.js'></script>
-
-    </body>
 </html>
