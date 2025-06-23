@@ -1,145 +1,94 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-<!-- START of define include HTML script -->
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Professional Cleaning Services in Leeds | The Deep Clean Team</title>
+  <meta name="description" content="The Deep Clean Team provides expert jet washing, driveway cleaning, patio restoration, and domestic & commercial cleaning in Leeds. Contact us for a free quote today!">
+  <meta name="keywords" content="Leeds Cleaning Services, Jet Washing Leeds, Driveway Cleaning Leeds, Patio Cleaning Leeds, Soft Washing Leeds, Commercial Cleaning Leeds, Domestic Cleaning Leeds">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
     }
-  }
-};
-</script>
-<!-- END of define include HTML script -->
+  </script>
+</head>
 
-    <head>
+<body>
+  <div w3-include-html="header.html"></div>
 
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>The Deep Clean Team | Home</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <meta name="description" content="Professional Cleaning Services in Leeds">
-        <meta name="keywords" content="Cleaning, Leeds, Power Washing, Professional, Deep Clean Team">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-
-        <!-- navbar mobile resp logic: -->
-
-            <script type="text/javascript">function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }</script>
-
-    </head>
-
-    <body>
-
-    <!-- Main site content starts here -->
-
-    <!-- INCLUDE header.html -->
-    <div w3-include-html="header.html"></div> 
-   
-
-
-
-<div class="gallery-container">
-  <div class="gallery-wrap">
-    <div class="item item-1"></div>
-    <div class="item item-2"></div>
-    <div class="item item-3"></div>
-    <div class="item item-4"></div>
-    <div class="item item-5"></div>
+  <div class="gallery-container">
+    <div class="gallery-wrap">
+      <div class="item item-1"></div>
+      <div class="item item-2"></div>
+      <div class="item item-3"></div>
+      <div class="item item-4"></div>
+      <div class="item item-5"></div>
+    </div>
   </div>
- </div>
 
-<div class="row-text-banner">
-    <p>Transforming Spaces with Expert Cleaning in Leeds</p>
-</div>
+  <div class="row-text-banner">
+    <p>Jet Washing & Deep Cleaning Services for Homes & Businesses in Leeds</p>
+  </div>
 
-
-
-<div class="hero-text-container">
+  <div class="hero-text-container">
     <div class="hero-text-header">
-    <h1><!-- <span class="underlined underline-overflow"> -->All Aspects<!-- </span> --> of <span class="underlined underline-clip">Commercial</span> & <span class="underlined underline-mask">Domestic</span> Cleaning Undertaken</h1>
+      <h1>Comprehensive <span class="underlined underline-clip">Cleaning Solutions</span> in <span class="underlined underline-mask">Leeds</span></h1>
     </div>
     <div class="hero-text-content">
-    <p>Welcome to The Deep Clean Team, your trusted partner for all your cleaning needs in Leeds and beyond. Whether you're a homeowner looking to refresh your patio, or a business owner needing a spotless shop front, we've got you covered.</p>
-    <br />
-    <p>We pride ourselves on our attention to detail and our commitment to using eco-friendly products, ensuring a safe and thorough clean every time. Let us take the hassle out of cleaning so you can enjoy a pristine, welcoming environment</p>
-    <br />
-    <p>Discover the difference with The Deep Clean Team today – because a cleaner space is just a call away!</p>
+      <p>The Deep Clean Team offers specialist cleaning services in Leeds, including pressure washing, driveway and patio restoration, and interior deep cleaning for both domestic and commercial properties.</p>
+      <br />
+      <p>We use eco-friendly products and professional-grade equipment to ensure the highest standards. Whether you're tackling stubborn exterior grime or preparing a property for sale, we’re here to help.</p>
+      <br />
+      <p>Call now for affordable, reliable service in Leeds – your space deserves the best clean it’s ever had.</p>
     </div>
 
+    <iframe style="margin-bottom: 50px;" width="80%" height="450" src="https://www.youtube.com/embed/lFi5vnftZy4?si=TFVtfOBO-Wwn6QYV" title="Jet Washing & Cleaning Services in Leeds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 
-<iframe style="margin-bottom: 50px;" width="80%" height="450" src="https://www.youtube.com/embed/lFi5vnftZy4?si=TFVtfOBO-Wwn6QYV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-
-
-
-<div class="row-icon-block">
-
-    <div class="row-header"><h1>Why Use Us?</h1></div>
+  <div class="row-icon-block">
+    <div class="row-header">
+      <h1>Why Choose The Deep Clean Team?</h1>
+    </div>
     <hr>
-
     <div class="row-icon-container">
-        <div class="row-icon-col">
-            <h1>5 Star Service</h1>
-            <img src="img/asset/favourite.gif">
-            <p>Experience unmatched quality with The Deep Clean Team. Our commitment to excellence ensures a sparkling clean every time, backed by countless satisfied customers.</p>
-        </div> 
-        <div class="row-icon-col">
-            <h1>Competitive Pricing</h1>
-            <img src="img/asset/pound.gif">
-            <p>Top-tier cleaning services don't have to break the bank. We offer competitive pricing to provide exceptional value without compromising on quality.</p>
-        </div> 
-        <div class="row-icon-col">
-            <h1>No Fuss Quotes</h1>
-            <img src="img/asset/folder.gif">
-            <p>Get a transparent, no-obligation quote quickly and easily. We believe in clear communication and straightforward pricing, so there are no surprises.</p>
-        </div> 
-        <div class="row-icon-col">
-            <h1>Professional & Prompt</h1>
-            <img src="img/asset/hiring.gif">
-            <p>Our professional team is always on time and ready to deliver outstanding service. We respect your schedule and your property, ensuring a hassle-free experience from start to finish.</p>
-        </div> 
+      <div class="row-icon-col">
+        <h1>5 Star Service</h1>
+        <img src="img/asset/favourite.gif" alt="5 Star Service">
+        <p>Experience unmatched quality with The Deep Clean Team. Our commitment to excellence ensures a sparkling clean every time, backed by countless satisfied customers across Leeds.</p>
+      </div>
+      <div class="row-icon-col">
+        <h1>Competitive Pricing</h1>
+        <img src="img/asset/pound.gif" alt="Affordable Cleaning Leeds">
+        <p>High-quality cleaning doesn’t have to be expensive. We offer competitive pricing without compromising on results.</p>
+      </div>
+      <div class="row-icon-col">
+        <h1>No Fuss Quotes</h1>
+        <img src="img/asset/folder.gif" alt="Easy Quotes">
+        <p>Request your free, no-obligation quote today. We provide clear, upfront pricing with no hidden fees.</p>
+      </div>
+      <div class="row-icon-col">
+        <h1>Professional & Prompt</h1>
+        <img src="img/asset/hiring.gif" alt="Prompt Cleaning Service Leeds">
+        <p>Our Leeds-based team is punctual, professional, and reliable. We respect your space and your time.</p>
+      </div>
     </div>
-
-</div>
-
+  </div>
 
 
 
@@ -234,51 +183,64 @@ function includeHTML() {
         </div>
     </section>
 <!-- partial -->
+
+
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
 
-
-
-
-
-<div class="row-quote-block">
-
-    <div class="row-header"><h1><span style="color: #fff;">Let's Get Started</span></h1></div>
-    <hr>
-
-    <div class="row-quote-container">
-        <div class="row-quote-col-text">
-            <h1>Now, Let's Get Your <br /><span style="color: #A91079;">Free Quote</span> <br />Sorted</h1>
-            <p>Ready for a sparkling clean? Just fill out our quick form, and we'll get back to you with a free, no-obligation quote in no time!</p>
-            <br /><br />
-            <p><i class="fa-solid fa-phone"></i></i> 07711276180</p>
-            <p><i class="fa-solid fa-envelope"></i> Thedeepcleanteam1@yahoo.com</p>
-            <p><i class="fa-solid fa-map-location"></i> 37 Hough End Ave, Bramley, Leeds</p>
-            <br /><br />
-            <a href="contact.html"><div class="row-quote-col-button"><p>Submit Form</p></div></a>
-        </div> 
-        <div class="row-quote-col-img">
-            <a href="contact.html"><img src="img/asset/quote-form.png"></a>
-        </div> 
+  <div class="row-quote-block">
+    <div class="row-header">
+      <h1><span style="color: #fff;">Get Your Leeds Cleaning Quote</span></h1>
     </div>
+    <hr>
+    <div class="row-quote-container">
+      <div class="row-quote-col-text">
+        <h1>Let's Get Your <br /><span style="color: #A91079;">Free Quote</span> <br />Sorted Today</h1>
+        <p>Fill out our quick form to receive a fast, no-obligation quote for expert cleaning in Leeds and surrounding areas.</p>
+        <br /><br />
+        <p><i class="fa-solid fa-phone"></i> 07711276180</p>
+        <p><i class="fa-solid fa-envelope"></i> Thedeepcleanteam1@yahoo.com</p>
+        <p><i class="fa-solid fa-map-location"></i> 37 Hough End Ave, Bramley, Leeds</p>
+        <br /><br />
+        <a href="contact.html">
+          <div class="row-quote-col-button">
+            <p>Submit Form</p>
+          </div>
+        </a>
+      </div>
+      <div class="row-quote-col-img">
+        <a href="contact.html"><img src="img/asset/quote-form.png" alt="Cleaning Quote Form Leeds"></a>
+      </div>
+    </div>
+  </div>
 
-</div>
+  <div w3-include-html="footer.html"></div>
 
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+              if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          return;
+        }
+      }
+    };
+    includeHTML();
+  </script>
+</body>
 
-
-
-
-<!-- INCLUDE footer.html -->
-<div w3-include-html="footer.html"></div> 
-
-
-
-
-<!-- START of call include HTML script -->
-<script>
-includeHTML();
-</script>
-<!-- END of call include HTML script -->
-
-    </body>
 </html>
