@@ -1,134 +1,82 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-<!-- START of define include HTML script -->
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>About The Deep Clean Team | Expert Cleaning Services in Leeds</title>
+  <meta name="description" content="Learn about The Deep Clean Team – trusted specialists in jet washing, soft washing, and commercial and domestic cleaning services across Leeds and West Yorkshire.">
+  <meta name="keywords" content="About Deep Clean Team, Cleaning Experts Leeds, Jet Washing Leeds, Soft Washing Leeds, Chemical Washing Leeds, Local Cleaners Leeds">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
     }
-  }
-};
-</script>
-<!-- END of define include HTML script -->
+  </script>
+</head>
 
-    <head>
+<body>
+  <div w3-include-html="header.html"></div>
 
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>The Deep Clean Team | About</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <meta name="description" content="Professional Cleaning Services in Leeds">
-        <meta name="keywords" content="Cleaning, Leeds, Power Washing, Professional, Deep Clean Team">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/gallery.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-
-        <!-- navbar mobile resp logic: -->
-
-            <script type="text/javascript">function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }</script>
-
-    </head>
-
-    <body>
-
-
-    <!-- Main site content starts here -->
-
-    <!-- INCLUDE header.html -->
-    <div w3-include-html="header.html"></div> 
-   
-
-
-
-<div class="hero-text-container">
+  <div class="hero-text-container">
     <div class="hero-text-header">
-    <h1>Just <span class="underlined underline-clip">Who</span> Are We Anyway?</h1>
+      <h1>Meet <span class="underlined underline-clip">The Deep Clean Team</span> – Leeds' Local Cleaning Experts</h1>
     </div>
     <div class="hero-text-content">
-    <p>Welcome to The Deep Clean Team, Leeds' premier jet washing and chemical washing specialists. Based in the heart of West Yorkshire, we are a dedicated team of professionals committed to delivering exceptional cleaning services to both residential and commercial clients. Our mission is to transform your spaces, restoring them to their pristine condition with our top-notch cleaning solutions.</p>
-    <br /><br />
-    <p>At The Deep Clean Team, we pride ourselves on our extensive experience and expertise in the cleaning industry. Our team is composed of skilled technicians who are passionate about what they do. We continuously invest in the latest equipment and training to ensure we provide the best service possible. Whether it's a small patio or a large commercial property, we have the tools and knowledge to handle it all.</p>
-    <hr>
-    <br /><br />
-    <span class="allign-text-left">
-    <h2>Our Services</h2>
-    <p>We offer a comprehensive range of cleaning services designed to meet the unique needs of our clients:</p>
-    <br /><br />
-        <ul>
-    <li><p><b>Jet Washing:</b> Our high-pressure jet washing services effectively remove dirt, grime, algae, and moss from various surfaces including driveways, patios, decking, and walls. This service is perfect for rejuvenating outdoor spaces and enhancing curb appeal.</p></li>
-    <li><p><b>Chemical Washing:</b> For tougher stains and surfaces that require a more delicate touch, our chemical washing services are the ideal solution. Using eco-friendly and effective cleaning agents, we can tackle oil stains, graffiti, and other stubborn marks without damaging the underlying material.</p></li>
-    <li><p><b>Soft Washing:</b> Our soft washing services provide a gentle yet thorough clean for delicate surfaces. Utilizing low-pressure water combined with specialized cleaning solutions, we safely remove mildew, mold, algae, and other contaminants from roofs, sidings, and other sensitive areas. This method ensures the longevity of your surfaces while achieving a deep clean.</p></li>
-        </ul>
-    <p>Visit our <a href="services.html">Services page</a> to explore our services in greater detail.</p>
-    <br /><br />
-    <h2>Why Choose Us?</h2>
-    <p><b>Professionalism:</b> We are committed to delivering a professional service from start to finish. Our team is punctual, courteous, and respectful of your property.</p>
-    <p><b>Quality Assurance:</b> We take pride in our work and guarantee the highest standards of cleanliness. Customer satisfaction is our top priority.</p>
-    <p><b>Eco-Friendly Solutions:</b> We care about the environment and use biodegradable and eco-friendly cleaning products that are safe for your property and the planet.</p>
-    <p><b>Affordable Pricing:</b> We believe in providing excellent service at competitive prices. Our transparent pricing ensures there are no hidden costs.</p>
-    <br /><br />
-    <h2>Our Commitment</h2>
-    <p>The Deep Clean Team is dedicated to building long-term relationships with our clients through reliable and outstanding service. We understand the importance of maintaining clean and hygienic environments, whether it’s your home or business premises. Our goal is to exceed your expectations with every job we undertake.</p>
-    <br /><br />
-    <h2>Get in Touch</h2>
-    <p>Ready to experience the Deep Clean difference? <a href="contact.html">Contact us</a> today for a free, no-obligation quote. Let us help you bring back the sparkle to your property.</p>
-    <p>Thank you for considering The Deep Clean Team. We look forward to serving you and making your spaces shine like never before.</p>
+      <p>The Deep Clean Team is proud to be one of Leeds' most trusted providers of professional cleaning services. We're not just another cleaning company – we're a dedicated team of jet washing and soft washing specialists who care about making every property shine. Our team serves both homeowners and businesses across Leeds and West Yorkshire.</p>
+
+      <p>From patios and driveways to roof tiles and shop fronts, our combination of powerful equipment, eco-conscious products, and deep industry knowledge ensures unbeatable results. Whether you need a one-off clean or ongoing maintenance, we approach every job with the same level of care and commitment.</p>
+
+      <hr><br><br>
+
+      <h2>What We Do</h2>
+      <p>Our tailored cleaning services include:</p>
+      <ul>
+        <li><b>Jet Washing:</b> High-pressure surface cleaning for patios, block paving, decking, and brickwork.</li>
+        <li><b>Chemical Washing:</b> Stain removal using eco-safe agents—great for graffiti, tarmac, and rendered walls.</li>
+        <li><b>Soft Washing:</b> Low-pressure cleaning for roofs, facades, windows, and other sensitive areas.</li>
+      </ul>
+      <p>For a full breakdown, see our <a href="services.html">Cleaning Services page</a>.</p>
+
+      <h2>Why Leeds Clients Choose Us</h2>
+      <ul>
+        <li><b>Experienced & Reliable:</b> Years of hands-on cleaning experience in domestic and commercial settings.</li>
+        <li><b>Eco-Friendly Approach:</b> We use biodegradable products wherever possible to protect the environment.</li>
+        <li><b>Local Knowledge:</b> As a Leeds-based business, we understand what local homes and businesses need.</li>
+        <li><b>Fair, Upfront Pricing:</b> Honest quotes and no hidden charges—just great service at a great rate.</li>
+      </ul>
+
+      <h2>Our Mission</h2>
+      <p>We aim to raise the standard for external and specialist cleaning in Leeds. Our commitment is to deliver five-star service with professional results, no matter the size of the job. We want our customers to feel confident recommending us—and they do!</p>
+
+      <h2>Get Started with The Deep Clean Team</h2>
+      <p>If you're in Leeds or the surrounding area and need cleaning services you can rely on, we're ready to help. <a href="contact.html">Reach out for a free quote</a> and discover what makes The Deep Clean Team different.</p>
+
+      <p>Thank you for supporting a local Leeds business—we look forward to transforming your space soon.</p>
     </div>
-</span>
-</div>
+  </div>
 
+  <div w3-include-html="footer.html"></div>
 
+  <script>
+    includeHTML();
+  </script>
+  <script src='js/gallery.js'></script>
+</body>
 
-<!-- INCLUDE footer.html -->
-<div w3-include-html="footer.html"></div> 
-
-
-
-
-<!-- START of call include HTML script -->
-<script>
-includeHTML();
-</script>
-<!-- END of call include HTML script -->
-
-      <script src='js/gallery.js'></script>
-
-    </body>
 </html>
