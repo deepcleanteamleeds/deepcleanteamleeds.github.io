@@ -1,6 +1,39 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
+
+<!-- START of define include HTML script -->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<!-- END of define include HTML script -->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -44,21 +77,22 @@
 
       <hr><br><br>
 
+ <span class="allign-text-left">
       <h2>What We Do</h2>
       <p>Our tailored cleaning services include:</p>
       <ul>
-        <li><b>Jet Washing:</b> High-pressure surface cleaning for patios, block paving, decking, and brickwork.</li>
-        <li><b>Chemical Washing:</b> Stain removal using eco-safe agents—great for graffiti, tarmac, and rendered walls.</li>
-        <li><b>Soft Washing:</b> Low-pressure cleaning for roofs, facades, windows, and other sensitive areas.</li>
+        <li><p><b>Jet Washing:</b> High-pressure surface cleaning for patios, block paving, decking, and brickwork.</p></li>
+        <li><p><b>Chemical Washing:</b> Stain removal using eco-safe agents—great for graffiti, tarmac, and rendered walls.</p></li>
+        <li><p><b>Soft Washing:</b> Low-pressure cleaning for roofs, facades, windows, and other sensitive areas.</p></li>
       </ul>
       <p>For a full breakdown, see our <a href="services.html">Cleaning Services page</a>.</p>
 
       <h2>Why Leeds Clients Choose Us</h2>
       <ul>
-        <li><b>Experienced & Reliable:</b> Years of hands-on cleaning experience in domestic and commercial settings.</li>
-        <li><b>Eco-Friendly Approach:</b> We use biodegradable products wherever possible to protect the environment.</li>
-        <li><b>Local Knowledge:</b> As a Leeds-based business, we understand what local homes and businesses need.</li>
-        <li><b>Fair, Upfront Pricing:</b> Honest quotes and no hidden charges—just great service at a great rate.</li>
+        <li><p><b>Experienced & Reliable:</b> Years of hands-on cleaning experience in domestic and commercial settings.</p></li>
+        <li><p><b>Eco-Friendly Approach:</b> We use biodegradable products wherever possible to protect the environment.</p></li>
+        <li><p><b>Local Knowledge:</b> As a Leeds-based business, we understand what local homes and businesses need.</p></li>
+        <li><p><b>Fair, Upfront Pricing:</b> Honest quotes and no hidden charges—just great service at a great rate.</p></li>
       </ul>
 
       <h2>Our Mission</h2>
@@ -69,6 +103,7 @@
 
       <p>Thank you for supporting a local Leeds business—we look forward to transforming your space soon.</p>
     </div>
+</span>
   </div>
 
   <div w3-include-html="footer.html"></div>

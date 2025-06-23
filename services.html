@@ -1,6 +1,38 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
+<!-- START of define include HTML script -->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<!-- END of define include HTML script -->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -41,74 +73,55 @@
       <p>Based in Leeds, The Deep Clean Team provides a wide range of residential and commercial cleaning solutions. Our professional-grade tools and eco-conscious products deliver exceptional results for driveways, patios, roofs, gutters, and more.</p>
       <hr><br><br>
 
+
+
+ <span class="allign-text-left">
       <h2>Jet Washing in Leeds</h2>
       <p>We offer powerful pressure washing for homes and businesses across Leeds. Jet washing is ideal for:</p>
       <ul>
-        <li><b>Driveways</b> – Remove grime, stains, and algae to restore your property's kerb appeal.</li>
-        <li><b>Patios</b> – Clean moss and dirt from slabs, stone, or tiles, leaving a fresh finish.</li>
-        <li><b>Shop Fronts</b> – Maintain a clean business entrance to impress customers.</li>
-        <li><b>Beer Gardens</b> – Provide guests a tidy, slip-free outdoor seating area.</li>
+        <li><p><b>Driveways</b> – Remove grime, stains, and algae to restore your property's kerb appeal.</p></li>
+        <li><p><b>Patios</b> – Clean moss and dirt from slabs, stone, or tiles, leaving a fresh finish.</p></li>
+        <li><p><b>Shop Fronts</b> – Maintain a clean business entrance to impress customers.</p></li>
+        <li><p><b>Beer Gardens</b> – Provide guests a tidy, slip-free outdoor seating area.</p></li>
       </ul>
 
       <h2>Chemical Washing Services</h2>
       <p>Some surfaces benefit from a low-pressure chemical treatment using biodegradable products. These are perfect for:</p>
       <ul>
-        <li><b>House Washing</b> – Restore the exterior of homes including brick, render, and UPVC.</li>
-        <li><b>Event Venue Cleaning</b> – Spotless preparation and post-event clean-ups.</li>
-        <li><b>Tarmac Restoration</b> – Remove stubborn stains and brighten faded tarmac drives.</li>
+        <li><p><b>House Washing</b> – Restore the exterior of homes including brick, render, and UPVC.</p></li>
+        <li><p><b>Event Venue Cleaning</b> – Spotless preparation and post-event clean-ups.</p></li>
+        <li><p><b>Tarmac Restoration</b> – Remove stubborn stains and brighten faded tarmac drives.</p></li>
       </ul>
 
       <h2>Soft Washing in Leeds</h2>
       <p>Our gentle but effective soft washing service suits delicate surfaces that require care without pressure damage:</p>
       <ul>
-        <li><b>Roof Cleaning</b> – Remove moss and lichen while preserving tiles and felt.</li>
-        <li><b>House Siding</b> – Ideal for wood, vinyl, or render facades.</li>
-        <li><b>Play Areas</b> – Ensure a clean and safe play surface for children.</li>
-        <li><b>Window Cleaning</b> – Spotless windows using filtered water with pole or traditional methods.</li>
-        <li><b>Conservatory Cleaning</b> – Remove built-up grime from PVC and glass surfaces.</li>
+        <li><p><b>Roof Cleaning</b> – Remove moss and lichen while preserving tiles and felt.</p></li>
+        <li><p><b>House Siding</b> – Ideal for wood, vinyl, or render facades.</p></li>
+        <li><p><b>Play Areas</b> – Ensure a clean and safe play surface for children.</p></li>
+        <li><p><b>Window Cleaning</b> – Spotless windows using filtered water with pole or traditional methods.</p></li>
+        <li><p><b>Conservatory Cleaning</b> – Remove built-up grime from PVC and glass surfaces.</p></li>
       </ul>
 
       <h2>Specialist Cleaning Services</h2>
       <p>We also offer tailored cleaning for complex or commercial jobs:</p>
       <ul>
-        <li><b>Warehouse Cleaning</b> – Large-scale indoor and exterior maintenance.</li>
-        <li><b>Insurance Work</b> – Post-damage cleaning for floods, fire or vandalism.</li>
-        <li><b>Gutter Cleaning</b> – Vacuum-assisted clearing for safe and efficient results.</li>
-        <li><b>Drain Jetting</b> – Clear blocked drains and restore water flow fast.</li>
+        <li><p><b>Warehouse Cleaning</b> – Large-scale indoor and exterior maintenance.</p></li>
+        <li><p><b>Insurance Work</b> – Post-damage cleaning for floods, fire or vandalism.</p></li>
+        <li><p><b>Gutter Cleaning</b> – Vacuum-assisted clearing for safe and efficient results.</p></li>
+        <li><p><b>Drain Jetting</b> – Clear blocked drains and restore water flow fast.</p></li>
       </ul>
 
       <p>For expert cleaning services across Leeds and West Yorkshire, <a href="contact.html">get in touch today</a> for your free, no-obligation quote. We're proud to serve local homes and businesses with reliable, professional cleaning support.</p>
     </div>
+  </span>
   </div>
 
   <div w3-include-html="footer.html"></div>
 
   <script>
-    function includeHTML() {
-      var z, i, elmnt, file, xhttp;
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        file = elmnt.getAttribute("w3-include-html");
-        if (file) {
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function () {
-            if (this.readyState == 4) {
-              if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-              if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-              elmnt.removeAttribute("w3-include-html");
-              includeHTML();
-            }
-          }
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          return;
-        }
-      }
-    };
     includeHTML();
   </script>
-
   <script src='js/gallery.js'></script>
 </body>
 
