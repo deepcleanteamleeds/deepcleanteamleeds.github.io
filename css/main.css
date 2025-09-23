@@ -606,7 +606,11 @@ display:none; /*ADDED 29/09/2025*/
 }
 
 
-
+@media (min-width: 1025px) {
+.static-homepage-hero{
+	display:none;
+}
+}
 
 
 
