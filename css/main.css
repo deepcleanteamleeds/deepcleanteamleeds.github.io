@@ -584,9 +584,6 @@ height: 45vh; /*  was 70*/
 
 
 @media (max-width: 1024px) {
-/*iframe{
-display:none; /*ADDED 29/09/2025*/
-}*/
 	.item-4 {
 		display: none;
 
@@ -694,7 +691,7 @@ font-size: 2.5vh;
 }
 
 .row-icon-container{
-	width: 70%;
+/*	width: 70%;*/
 	display: inline-block;
 	background-color: white;
 	text-align: center;
@@ -782,7 +779,7 @@ font-size: 2.5vh;
 }
 
 .row-quote-container{
-	width: 60%;
+/*	width: 60%;*/
 	display: inline-block;
 	text-align: center;
 }
