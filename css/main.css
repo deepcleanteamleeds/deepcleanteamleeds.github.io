@@ -584,6 +584,9 @@ height: 45vh; /*  was 70*/
 
 
 @media (max-width: 1024px) {
+iframe{
+display:none; /*ADDED 29/09/2025*/
+}
 	.item-4 {
 		display: none;
 
