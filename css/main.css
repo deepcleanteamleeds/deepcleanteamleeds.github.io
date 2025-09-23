@@ -596,6 +596,10 @@ height: 45vh; /*  was 70*/
 		height: 30vh; /*  was 70*/
 }
 
+.gallery-container{
+display:none; /*ADDED 29/09/2025*/
+}
+
 }
 
 
