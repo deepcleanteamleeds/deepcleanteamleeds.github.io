@@ -1,38 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
-
-<!-- START of define include HTML script -->
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
-<!-- END of define include HTML script -->
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -40,84 +7,168 @@ function includeHTML() {
   <meta name="description" content="Contact The Deep Clean Team in Leeds for expert jet washing, soft washing, and chemical cleaning services. Book your free, no-obligation quote today.">
   <meta name="keywords" content="Contact Cleaning Services Leeds, Jet Washing Quote, Power Washing Leeds, Deep Clean Team Contact, Free Cleaning Quote Leeds">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://deepcleanteam.uk/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Deep Clean Team">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Contact The Deep Clean Team | Book a Free Quote Today">
+  <meta property="og:description" content="Contact The Deep Clean Team in Leeds for expert jet washing, soft washing, and chemical cleaning services. Book your free, no-obligation quote today.">
+  <meta property="og:url" content="https://deepcleanteam.uk/contact.html">
+  <meta property="og:image" content="https://deepcleanteam.uk/img/jobs/IMG-20240702-WA0025.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact The Deep Clean Team | Book a Free Quote Today">
+  <meta name="twitter:description" content="Contact The Deep Clean Team in Leeds for expert jet washing, soft washing, and chemical cleaning services. Book your free, no-obligation quote today.">
+  <meta name="twitter:image" content="https://deepcleanteam.uk/img/jobs/IMG-20240702-WA0025.jpg">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0H1PZN244"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F0H1PZN244');
+  </script>
+
+  <script>
     function myFunction() {
       var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
+      var open = x.classList.toggle("responsive");
+      var btn = document.getElementById("navToggle");
+      if (btn) { btn.setAttribute("aria-expanded", open ? "true" : "false"); }
     }
   </script>
 </head>
 
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0H1PZN244"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F0H1PZN244');
-</script>
-
-
 <body>
-  <div w3-include-html="header.html"></div>
+  <!-- Header start -->
+  <header class="header">
+    <div class="nav-wrap">
+      <div class="logo" id="home">
+        <a href="index.html"><img alt="The Deep Clean Team logo" src="img/asset/dct-logo-inline-b-white-large.png"></a>
+      </div>
 
-  <div class="hero-text-container">
-    <div class="hero-text-header">
-      <h1>Get in <span class="underlined underline-mask">Touch</span> with Us</h1>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" onclick="myFunction()">&#9776;</button>
+
+      <nav class="topnav" id="myTopnav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contact.html" class="nav-cta">Get a Free Quote</a>
+      </nav>
     </div>
-    <div class="hero-text-content">
-      <p>Looking to revitalise your driveway, roof, or commercial property? The Deep Clean Team is here to help. Based in Leeds, we offer expert pressure washing and eco-friendly soft washing services across West Yorkshire. Whether you need a quote, have a question, or want to discuss a custom cleaning project, our friendly team is ready to assist.</p>
-      <p>Use the contact form below to request your <strong>free, no-obligation quote</strong>—or reach out directly using the details at the bottom of the page.</p>
+  </header>
+  <!-- Header end -->
+
+  <section class="page-hero" style="background-image:url('img/jobs/IMG-20240702-WA0025.jpg');">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">We'd Love To Hear From You</span>
+      <h1>Get in <span class="accent-underline">Touch</span> with Us</h1>
+      <p>Looking to revitalise your driveway, roof, or commercial property? The Deep Clean Team is here to help. Based in Leeds, we offer expert pressure washing and eco-friendly soft washing services across West Yorkshire.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- <div class="page-spacer"></div> -->
+  <section class="section" style="padding-bottom:0;">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="service-icon"><i class="fa-solid fa-phone"></i></div>
+        <h3>Call Us</h3>
+        <a href="tel:+447711276180">07711 276180</a>
+      </div>
+      <div class="contact-card">
+        <div class="service-icon"><i class="fa-solid fa-envelope"></i></div>
+        <h3>Email Us</h3>
+        <a href="mailto:Thedeepcleanteam1@yahoo.com">Thedeepcleanteam1@yahoo.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="service-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>Find Us</h3>
+        <p>37 Hough End Ave, Bramley, Leeds</p>
+      </div>
+    </div>
+  </section>
 
-  <iframe
-    id="JotFormIFrame-241867233642358"
-    title="Request for Quote"
-    onload="window.parent.scrollTo(0,0)"
-    allowtransparency="true"
-    allow="geolocation; microphone; camera; fullscreen"
-    src="https://form.jotform.com/241867233642358"
-    frameborder="0"
-    style="min-width:100%;max-width:100%;height:539px;border:none;"
-    scrolling="no">
-  </iframe>
-  <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-  <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241867233642358']", "https://form.jotform.com/")</script>
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Free Quote</span>
+      <h2>Request Your Free, No-Obligation Quote</h2>
+      <p>Fill in the form below and we'll get back to you within one business day.</p>
+    </div>
+    <div class="form-wrap">
+      <div class="form-frame">
+        <iframe
+          id="JotFormIFrame-241867233642358"
+          title="Request for Quote"
+          onload="window.parent.scrollTo(0,0)"
+          allowtransparency="true"
+          allow="geolocation; microphone; camera; fullscreen"
+          src="https://form.jotform.com/241867233642358"
+          frameborder="0"
+          style="min-width:100%;max-width:100%;height:539px;border:none;display:block;"
+          scrolling="no">
+        </iframe>
+      </div>
+    </div>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241867233642358']", "https://form.jotform.com/")</script>
+  </section>
 
-  <div class="hero-text-container">
-  <div class="hero-text-content">
+  <div class="content-block" style="text-align:center;">
     <h2>Prefer to Call or Email?</h2>
-    <p><strong>Phone:</strong> <a href="tel:+447711276180">07711276180</a><br />
+    <p><strong>Phone:</strong> <a href="tel:+447711276180">07711276180</a><br>
     <strong>Email:</strong> <a href="mailto:Thedeepcleanteam1@yahoo.com">Thedeepcleanteam1@yahoo.com</a></p>
     <p>We're available Monday to Saturday and aim to respond to all messages within one business day.</p>
-    <p>Ready to restore the beauty of your property? Reach out now and let’s get your cleaning project underway.</p>
+    <p>Ready to restore the beauty of your property? Reach out now and let's get your cleaning project underway.</p>
   </div>
-</div>
 
-  <div w3-include-html="footer.html"></div>
+  <!-- Footer start -->
+  <section class="footer">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>The Deep Clean Team</h4>
+        <p>Leeds-based specialists in jet washing, soft washing, and domestic &amp; commercial deep cleaning. Fully insured, locally trusted, five-star rated.</p>
+        <div class="icons">
+          <a href="https://www.facebook.com/profile.php?id=61556897892997" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@thedeepcleanteam" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
 
-  <script>
-    includeHTML();
-  </script>
-  <script src='js/gallery.js'></script>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul class="links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="legal.html">Legal</a></li>
+          <li><a href="attribution.html">Attribution</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Portfolio</h4>
+        <ul class="links">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="https://www.google.com/search?client=firefox-b-d&q=deep+clean+team+leeds#lrd=0x48795f379d32c173:0x56d5f84a894d5c8e,1,,,,">Google Reviews</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61556897892997&sk=reviews">Facebook Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get Quoted</h4>
+        <p>We won't be beaten on price or service — visit our quotes page for a 100% free, no-obligation quote.</p>
+        <div class="footer-quote-btn"><a href="contact.html">Get My Quote</a></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 The Deep Clean Team, Leeds. All rights reserved. &middot; 37 Hough End Ave, Bramley, Leeds
+    </div>
+  </section>
+  <!-- Footer end -->
 </body>
-
 </html>

@@ -1,168 +1,69 @@
-/* Code mostly copied from https://github.com/gpbl/isomorphic500/blob/master/src/style/ThumbnailCollection.scss */
+/* Deep Clean Team — gallery grid + lightbox
+   Responsive masonry-style grid replacing old fixed-min-width flex hack. */
 
-#gallery {
-  max-width: 80%;
+.gallery-grid {
+  max-width: var(--container, 1200px);
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 980px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 680px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
+@media (max-width: 420px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
 }
 
 .thumbnail-wrapper {
-  background-color: #333;
-  min-width: 26rem;
-  min-height: 14rem;
   position: relative;
-  flex: 1;
-  flex-basis: 8rem;
-  margin-right: 2px;
-  margin-bottom: 2px;
-}
-
-.thumbnail-wrapper:nth-child(5n) {
-  flex-basis: 18rem;
-}
-
-.thumbnail-wrapper:nth-child(2n+1) {
-  flex-basis: 14rem;
-}
-
-.thumbnail-wrapper:nth-child(7n+4) {
-  flex-basis: 30rem;
-  min-height: 12rem;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #333;
+  box-shadow: var(--shadow-sm, 0 4px 14px -6px rgba(16,24,47,0.18));
+  cursor: pointer;
 }
 
 .thumbnail {
+  display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: transform 0.35s ease;
 }
 
-.thumbnail:hover {
-  opacity: 0.5;
-  transition: .1s ease-in;
+.thumbnail-wrapper:hover .thumbnail {
+  transform: scale(1.08);
 }
 
-@media (max-width: 800px) {
-#gallery{
-  max-width: 95%;
-}
-}
-
-@media (max-width: 500px) {
-#gallery{
-  max-width: 100%;
-}
-}
-
-
-/*
-
-#gallery {
-  max-width: 80%;
-  margin: 0 auto;
+.thumbnail-wrapper:after {
+  content: '\f00e';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  inset: 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.4rem;
+  background: rgba(16, 24, 47, 0);
+  opacity: 0;
+  transition: opacity 0.25s ease, background 0.25s ease;
+  /* Purely decorative hover overlay — must not intercept clicks meant
+     for the <a> thumbnail link sitting underneath it. */
+  pointer-events: none;
 }
 
-.thumbnail-wrapper {
-  background-color: #333;
-  min-width: 12rem;
-  min-height: 8rem;
-  position: relative;
-  flex: 1;
-  flex-basis: 8rem;
-  margin-right: 2px;
-  margin-bottom: 2px;
-}
-
-.thumbnail-wrapper:nth-child(5n) {
-  flex-basis: 14rem;
-}
-
-.thumbnail-wrapper:nth-child(2n+1) {
-  flex-basis: 10rem;
-}
-
-.thumbnail-wrapper:nth-child(7n+4) {
-  flex-basis: 20rem;
-  min-height: 12rem;
-}
-
-.thumbnail {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.thumbnail:hover {
-  opacity: 0.5;
-  transition: .1s ease-in;
-}*/
-
-
-
-#gallery-commercial {
-  max-width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.thumbnail-wrapper {
-  background-color: #333;
-  min-width: 26rem;
-  min-height: 14rem;
-  position: relative;
-  flex: 1;
-  flex-basis: 8rem;
-  margin-right: 2px;
-  margin-bottom: 2px;
-}
-
-.thumbnail-wrapper:nth-child(5n) {
-  flex-basis: 18rem;
-}
-
-.thumbnail-wrapper:nth-child(2n+1) {
-  flex-basis: 14rem;
-}
-
-.thumbnail-wrapper:nth-child(7n+4) {
-  flex-basis: 30rem;
-  min-height: 12rem;
-}
-
-.thumbnail {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.thumbnail:hover {
-  opacity: 0.5;
-  transition: .1s ease-in;
-}
-
-@media (max-width: 800px) {
-#gallery-commercial{
-  max-width: 95%;
-}
-}
-
-@media (max-width: 500px) {
-#gallery-commercial{
-  max-width: 100%;
-}
+.thumbnail-wrapper:hover:after {
+  opacity: 1;
+  background: rgba(16, 24, 47, 0.35);
 }
