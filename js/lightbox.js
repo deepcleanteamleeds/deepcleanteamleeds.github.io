@@ -1,4 +1,4 @@
-/* Deep Clean Team — simple dependency-free lightbox */
+/* Deep Clean Team - simple dependency-free lightbox */
 (function () {
   var overlay, imgEl, closeBtn, prevBtn, nextBtn;
   var currentImages = [];

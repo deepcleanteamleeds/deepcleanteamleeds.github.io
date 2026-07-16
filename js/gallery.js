@@ -22,7 +22,7 @@ var domesticImages = [
   "img/jobs/dct-solar-panel-cleaning.jpg"
 ];
 
-/* Thumbnails are plain links straight to the image file — clicking one
+/* Thumbnails are plain links straight to the image file - clicking one
    simply opens/navigates to the photo, same as the site's original
    behaviour. No JS modal dependency, so it always works. */
 (function () {

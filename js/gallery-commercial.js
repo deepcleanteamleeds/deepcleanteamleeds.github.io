@@ -6,7 +6,7 @@ var commercialImages = [
   "img/jobs/commercial/IMG-20240709-WA0009.jpg"
 ];
 
-/* Thumbnails are plain links straight to the image file — clicking one
+/* Thumbnails are plain links straight to the image file - clicking one
    simply opens/navigates to the photo, same as the site's original
    behaviour. No JS modal dependency, so it always works. */
 (function () {

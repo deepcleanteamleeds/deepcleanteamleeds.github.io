@@ -1,7 +1,7 @@
-/* Deep Clean Team — lightweight testimonial slider.
+/* Deep Clean Team - lightweight testimonial slider.
    Works with any number of .testimonial-slide elements inside a
    .testimonial-slider > .testimonial-track container. To add another
-   review, just duplicate a .testimonial-slide block in the HTML —
+   review, just duplicate a .testimonial-slide block in the HTML -
    the dots/arrows/autoplay all adapt automatically. */
 (function () {
   function initSlider(root) {
