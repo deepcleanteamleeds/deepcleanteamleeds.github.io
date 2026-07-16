@@ -550,14 +550,18 @@ hr {
 
 /* ---------- Service teaser grid (homepage) ---------- */
 .service-teaser-grid {
-  max-width: var(--container);
+  max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0 24px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
+  .service-teaser-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 780px) {
   .service-teaser-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {
@@ -569,7 +573,7 @@ hr {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 28px 24px;
+  padding: 24px 20px;
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
